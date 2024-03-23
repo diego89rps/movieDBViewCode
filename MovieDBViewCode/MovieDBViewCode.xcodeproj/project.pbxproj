@@ -22,6 +22,8 @@
 		9F8031632BAA0E32002AC44B /* BaseViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80315F2BAA0E32002AC44B /* BaseViewCode.swift */; };
 		9F8031642BAA0E32002AC44B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8031602BAA0E32002AC44B /* BaseViewController.swift */; };
 		9F8031662BAA25AC002AC44B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8031652BAA25AC002AC44B /* BaseView.swift */; };
+		9FDF79A62BAEC61A00222C77 /* GenericCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */; };
+		9FDF79A82BAF505500222C77 /* MainAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		9F80315F2BAA0E32002AC44B /* BaseViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCode.swift; sourceTree = "<group>"; };
 		9F8031602BAA0E32002AC44B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9F8031652BAA25AC002AC44B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCardView.swift; sourceTree = "<group>"; };
+		9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		9F8031562BAA0E1F002AC44B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FDF79A42BAEC60300222C77 /* View Elements */,
 				9F8031542BAA0E1F002AC44B /* MainAppView.swift */,
 				9F8031552BAA0E1F002AC44B /* MainAppViewController.swift */,
 			);
@@ -160,6 +165,7 @@
 		9F8031572BAA0E1F002AC44B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +205,14 @@
 				9F8031602BAA0E32002AC44B /* BaseViewController.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FDF79A42BAEC60300222C77 /* View Elements */ = {
+			isa = PBXGroup;
+			children = (
+				9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */,
+			);
+			path = "View Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,12 +345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDF79A62BAEC61A00222C77 /* GenericCardView.swift in Sources */,
 				9F8031122BA9F942002AC44B /* ViewController.swift in Sources */,
 				9F80315C2BAA0E1F002AC44B /* MainAppViewController.swift in Sources */,
 				9F80315B2BAA0E1F002AC44B /* MainAppView.swift in Sources */,
 				9F80315A2BAA0E1F002AC44B /* MainAppCoordinator.swift in Sources */,
 				9F80310E2BA9F942002AC44B /* AppDelegate.swift in Sources */,
 				9F8031642BAA0E32002AC44B /* BaseViewController.swift in Sources */,
+				9FDF79A82BAF505500222C77 /* MainAppViewModel.swift in Sources */,
 				9F8031102BA9F942002AC44B /* SceneDelegate.swift in Sources */,
 				9F8031662BAA25AC002AC44B /* BaseView.swift in Sources */,
 				9F8031632BAA0E32002AC44B /* BaseViewCode.swift in Sources */,

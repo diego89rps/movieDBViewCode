@@ -5,20 +5,53 @@
 //  Created by Diego Ribeiro on 19/03/24.
 //
 import UIKit
-class BaseView: UIScrollView {
+
+class BaseView: UIView {
+
+    // MARK: Properties
     
-    var container: UIView = {
-        return UIView()
+    lazy var container: UIView = {
+        let mainView = UIView()
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        return mainView
+    }()
+
+    lazy var scrollView: UIScrollView = {
+        let container = UIScrollView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.showsVerticalScrollIndicator = false
+        container.showsHorizontalScrollIndicator = false
+        container.bounces = false
+        return container
     }()
     
     // MARK: Initializers
     
-    init() {
-        super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBaseView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    // MARK: Methods
+    
+    func setupBaseView() {
+        scrollView.addSubview(container)
+        addSubview(scrollView)
+        NSLayoutConstraint.activate([
+            container.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            container.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            container.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }

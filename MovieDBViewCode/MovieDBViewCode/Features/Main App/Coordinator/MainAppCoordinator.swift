@@ -21,7 +21,15 @@ class MainAppCoordinator: Coordinator {
     }
     
     func goToResume() {
-        let vc = MainAppViewController()
+        let vm = MainAppViewModel()
+        vm.CoordinatordDlegate = self
+        let vc = MainAppViewController(viewModel: vm)
         navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension MainAppCoordinator: MainAppViewModelCoordinatorDelegate {
+    func goToNextView() {
+        print("entrou")
     }
 }

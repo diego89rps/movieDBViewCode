@@ -7,7 +7,24 @@
 
 import UIKit
 
-class MainAppView: UIView, BaseViewCode {
+class MainAppView: BaseView, BaseViewCode {
+    
+    // MARK: Properties
+    
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.alignment = .fill
+        stackView.contentMode = .scaleToFill
+        return stackView
+    }()
+    
+    lazy var simpleCard: GenericCardView = GenericCardView()
+    
+    lazy var completedCard: GenericCardView = GenericCardView()
+    
 
     // MARK: Initializers
     
@@ -20,12 +37,21 @@ class MainAppView: UIView, BaseViewCode {
         super.init(coder: coder)
     }
     
+    // MARK: Methods
+    
     func setupSubviews() {
-        
+        stackView.addArrangedSubview(simpleCard)
+        stackView.addArrangedSubview(completedCard)
+        container.addSubview(stackView)
     }
     
     func setupConstraints() {
-        backgroundColor = .green
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: container.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16),
+            stackView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: container.bottomAnchor),
+        ])
     }
-    
 }
