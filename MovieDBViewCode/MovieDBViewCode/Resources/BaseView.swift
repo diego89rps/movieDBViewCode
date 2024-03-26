@@ -55,3 +55,14 @@ class BaseView: UIView {
         ])
     }
 }
+
+extension BaseView {
+    func insertIntoSuperView(superView: UIView) {
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: superView.topAnchor),
+            self.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
+            self.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
+            self.bottomAnchor.constraint(equalTo: superView.bottomAnchor)
+        ])
+    }
+}

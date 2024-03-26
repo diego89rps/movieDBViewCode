@@ -22,7 +22,7 @@ class MainAppCoordinator: Coordinator {
     
     func goToResume() {
         let vm = MainAppViewModel()
-        vm.CoordinatordDlegate = self
+        vm.coordinatordDlegate = self
         let vc = MainAppViewController(viewModel: vm)
         navigationController.pushViewController(vc, animated: true)
     }

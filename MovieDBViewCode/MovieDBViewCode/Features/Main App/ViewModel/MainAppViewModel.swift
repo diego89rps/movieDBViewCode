@@ -14,12 +14,25 @@ protocol MainAppViewModelCoordinatorDelegate: AnyObject {
 protocol MainAppViewModelViewDelegate: AnyObject {
     func createSimpleView()
     func createCompleteView()
+    func loadingView(isLoading: Bool)
 }
 
 class MainAppViewModel {
     
     weak var viewDelegate: MainAppViewModelViewDelegate?
-    weak var CoordinatordDlegate: MainAppViewModelCoordinatorDelegate?
+    weak var coordinatordDlegate: MainAppViewModelCoordinatorDelegate?
+    
+    var screenTitleText: String {
+        return "Menu"
+    }
+    
+    var leftButtonText: String {
+        return "esquerda"
+    }
+    
+    var rightButtonText: String {
+        return "direita"
+    }
     
     var simpleTitleText: String {
         return "Implementacao Simples"
@@ -59,6 +72,6 @@ class MainAppViewModel {
     }
     
     func goToNextView() {
-        
+        coordinatordDlegate?.goToNextView()
     }
 }

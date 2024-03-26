@@ -47,10 +47,9 @@ class MainAppView: BaseView, BaseViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(greaterThanOrEqualTo: container.topAnchor),
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: container.topAnchor, constant: 200),
             stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16),
-            stackView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
             stackView.bottomAnchor.constraint(greaterThanOrEqualTo: container.bottomAnchor),
         ])
     }

@@ -8,10 +8,18 @@
 import UIKit
 
 class MainAppViewController: BaseViewController {
-    typealias CustomView = MainAppView
     
-    let customView = CustomView()
+    // MARK: Properties
+    
+    lazy var customView: MainAppView = {
+        let mainView = MainAppView()
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        return mainView
+    }()
+    
     let viewModel: MainAppViewModel
+    
+    // MARK: Initializers
     
     init(viewModel: MainAppViewModel) {
         self.viewModel = viewModel
@@ -21,17 +29,36 @@ class MainAppViewController: BaseViewController {
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func loadView() {
-        super.loadView()
-        view = customView
-        title = "TITULO"
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(customView)
+        customView.insertIntoSuperView(superView: self.view)
+        setupNavBar()
         viewModel.viewDelegate = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.setupView()
+    }
+    // MARK: Methods
+    
+    func setupNavBar() {
+        let leftButton = UIBarButtonItem(title: viewModel.leftButtonText, style: .plain, target: self, action: #selector(leftButtonAction))
+        let rightButton = UIBarButtonItem(title: viewModel.rightButtonText, style: .plain, target: self, action: #selector(rightButtonAction))
+        createNavBar(title: viewModel.screenTitleText, leftButton: leftButton, rightButton: rightButton)
+    }
+    
+    //MARK: - Events
+    
+    @objc func leftButtonAction() {
+        loadingView(isLoading: true)
+    }
+    
+    @objc func rightButtonAction() {
+        loadingView(isLoading: false)
     }
 }
 
@@ -41,8 +68,7 @@ extension MainAppViewController: MainAppViewModelViewDelegate {
         customView.simpleCard.subTitleLabel.text = viewModel.simpleSubTitleText
         customView.simpleCard.genericClicked = { [weak self] in
             guard let self = self else { return }
-//            self.viewModel.goToNextView()
-            exemploUso()
+            self.viewModel.goToNextView()
         }
     }
     
@@ -51,19 +77,15 @@ extension MainAppViewController: MainAppViewModelViewDelegate {
         customView.completedCard.subTitleLabel.text = viewModel.completedSubTitleText
         customView.completedCard.genericClicked = { [weak self] in
             guard let self = self else { return }
-            self.callAlert(title: viewModel.alertTitleText, description: viewModel.alertDescriptionText, primaryAction: UIAlertAction(title: viewModel.alertBtnTitleText, style: .default, handler: nil),
+            self.callAlert(title: viewModel.alertTitleText, 
+                           description: viewModel.alertDescriptionText,
+                           primaryAction: UIAlertAction(title: viewModel.alertBtnTitleText, 
+                                                        style: .default, handler: nil),
                            secondaryAction: nil)
         }
     }
     
-    func exemploUso() {
-        view = activityIndicator
-        loading(isLoading: true)
-        
-        // Simular uma operação de carregamento assíncrona
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.view = self.customView
-            self.loading(isLoading: false)
-        }
+    func loadingView(isLoading: Bool) {
+        loading(isLoading: isLoading)
     }
 }

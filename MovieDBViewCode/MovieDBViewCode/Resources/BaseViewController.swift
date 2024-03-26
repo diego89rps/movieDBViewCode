@@ -17,33 +17,29 @@ open class BaseViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         super.init(nibName: nil, bundle: nil)
         activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        view.backgroundColor = .white
     }
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
-    open override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.view.backgroundColor = .white
-        setupNavBar()
-    }
-    
-    private func setupNavBar() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
+    func createNavBar(title: String, leftButton: UIBarButtonItem?, 
+                      rightButton: UIBarButtonItem?) {
+        self.title = title
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.view.backgroundColor = .black
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = .red
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        if let leftButton = leftButton {
+            navigationItem.leftBarButtonItem = leftButton
+        }
+        
+        if let rightButton = rightButton {
+            navigationItem.rightBarButtonItem = rightButton
+        }
+        
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     func callAlert(title: String, description: String, 
@@ -61,11 +57,11 @@ open class BaseViewController: UIViewController {
     
     func loading(isLoading: Bool) {
         if isLoading {
-            activityIndicator.startAnimating()
-            view.isUserInteractionEnabled = false
+            self.activityIndicator.startAnimating()
+            self.view.isUserInteractionEnabled = false
         } else {
-            activityIndicator.stopAnimating()
-            view.isUserInteractionEnabled = true
+            self.activityIndicator.stopAnimating()
+            self.view.isUserInteractionEnabled = true
         }
     }
 }
