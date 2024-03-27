@@ -15,12 +15,17 @@ protocol MainAppViewModelViewDelegate: AnyObject {
     func createSimpleView()
     func createCompleteView()
     func loadingView(isLoading: Bool)
+    func setupImage(data: Data)
 }
 
 class MainAppViewModel {
     
     weak var viewDelegate: MainAppViewModelViewDelegate?
     weak var coordinatordDlegate: MainAppViewModelCoordinatorDelegate?
+    
+    let movieDBService = MovieDBService()
+    
+    var movieResult: MovieResult?
     
     var screenTitleText: String {
         return "Menu"
@@ -64,6 +69,31 @@ class MainAppViewModel {
     
     init() {
         
+    }
+    
+    func featchPopularMovies() {
+        Task {
+            do {
+                let result = try await movieDBService.fetchPopularMoviesAwait()
+                self.movieResult = result
+                self.downloadImage()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func downloadImage() {
+        guard let movie = movieResult?.results[3], let posterURL = movie.posterPath  else { return }
+        
+        Task {
+            do {
+                let imageData = try await movieDBService.fetchImageData(imageURLString: posterURL)
+                self.viewDelegate?.setupImage(data: imageData)
+            } catch {
+                print("Erro ao buscar imagem:", error.localizedDescription)
+            }
+        }
     }
     
     func setupView() {

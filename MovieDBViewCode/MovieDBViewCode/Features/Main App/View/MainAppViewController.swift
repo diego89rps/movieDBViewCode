@@ -36,7 +36,7 @@ class MainAppViewController: BaseViewController {
         customView.insertIntoSuperView(superView: self.view)
         setupNavBar()
         viewModel.viewDelegate = self
-        
+        viewModel.featchPopularMovies()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,5 +87,17 @@ extension MainAppViewController: MainAppViewModelViewDelegate {
     
     func loadingView(isLoading: Bool) {
         loading(isLoading: isLoading)
+    }
+    
+    func setupImage(data: Data) {
+        DispatchQueue.main.async {
+            if let image = UIImage(data: data) {
+                // Faça algo com a imagem, como exibi-la em uma view
+                self.customView.image.image = image
+            } else {
+                print("Erro ao converter dados da imagem em UIImage")
+            }
+        }
+
     }
 }
