@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F26E0F12BB54E1300A0512A /* PopularMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26E0F02BB54E1300A0512A /* PopularMovieCell.swift */; };
+		9F459CC22BB52C5E00BE7913 /* PopularMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F459CC12BB52C5E00BE7913 /* PopularMoviesCoordinator.swift */; };
+		9F459CC42BB52C8100BE7913 /* PopularMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F459CC32BB52C8100BE7913 /* PopularMoviesViewModel.swift */; };
+		9F459CC62BB52C9B00BE7913 /* PopularMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F459CC52BB52C9B00BE7913 /* PopularMoviesViewController.swift */; };
+		9F459CC92BB52CC500BE7913 /* PopularMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F459CC82BB52CC500BE7913 /* PopularMoviesView.swift */; };
 		9F80310E2BA9F942002AC44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80310D2BA9F942002AC44B /* AppDelegate.swift */; };
 		9F8031102BA9F942002AC44B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80310F2BA9F942002AC44B /* SceneDelegate.swift */; };
 		9F8031122BA9F942002AC44B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8031112BA9F942002AC44B /* ViewController.swift */; };
@@ -22,6 +27,7 @@
 		9F8031632BAA0E32002AC44B /* BaseViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80315F2BAA0E32002AC44B /* BaseViewCode.swift */; };
 		9F8031642BAA0E32002AC44B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8031602BAA0E32002AC44B /* BaseViewController.swift */; };
 		9F8031662BAA25AC002AC44B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8031652BAA25AC002AC44B /* BaseView.swift */; };
+		9FB1257A2BB6576B008920EC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB125792BB6576B008920EC /* UIImage+Extension.swift */; };
 		9FDF79A62BAEC61A00222C77 /* GenericCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */; };
 		9FDF79A82BAF505500222C77 /* MainAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */; };
 		9FF129502BB35CF00030134E /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1294F2BB35CF00030134E /* MovieDBService.swift */; };
@@ -47,6 +53,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F26E0F02BB54E1300A0512A /* PopularMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCell.swift; sourceTree = "<group>"; };
+		9F459CC12BB52C5E00BE7913 /* PopularMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesCoordinator.swift; sourceTree = "<group>"; };
+		9F459CC32BB52C8100BE7913 /* PopularMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModel.swift; sourceTree = "<group>"; };
+		9F459CC52BB52C9B00BE7913 /* PopularMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewController.swift; sourceTree = "<group>"; };
+		9F459CC82BB52CC500BE7913 /* PopularMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesView.swift; sourceTree = "<group>"; };
 		9F80310A2BA9F942002AC44B /* MovieDBViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F80310D2BA9F942002AC44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F80310F2BA9F942002AC44B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +77,7 @@
 		9F80315F2BAA0E32002AC44B /* BaseViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCode.swift; sourceTree = "<group>"; };
 		9F8031602BAA0E32002AC44B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9F8031652BAA25AC002AC44B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9FB125792BB6576B008920EC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCardView.swift; sourceTree = "<group>"; };
 		9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModel.swift; sourceTree = "<group>"; };
 		9FF1294F2BB35CF00030134E /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
@@ -98,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F459CC72BB52CB000BE7913 /* View Elements */ = {
+			isa = PBXGroup;
+			children = (
+				9F26E0F02BB54E1300A0512A /* PopularMovieCell.swift */,
+			);
+			path = "View Elements";
+			sourceTree = "<group>";
+		};
 		9F8031012BA9F941002AC44B = {
 			isa = PBXGroup;
 			children = (
@@ -181,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				9F8031532BAA0E1F002AC44B /* Coordinator */,
-				9F8031562BAA0E1F002AC44B /* View */,
 				9F8031572BAA0E1F002AC44B /* ViewModel */,
+				9F8031562BAA0E1F002AC44B /* View */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -207,12 +227,21 @@
 		9F8031612BAA0E32002AC44B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9FB125782BB65725008920EC /* Extensions */,
 				9F80315E2BAA0E32002AC44B /* Protocols */,
 				9F8031652BAA25AC002AC44B /* BaseView.swift */,
 				9F80315F2BAA0E32002AC44B /* BaseViewCode.swift */,
 				9F8031602BAA0E32002AC44B /* BaseViewController.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FB125782BB65725008920EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FB125792BB6576B008920EC /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9FDF79A42BAEC60300222C77 /* View Elements */ = {
@@ -254,6 +283,9 @@
 		9FF129552BB36F890030134E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F459CC72BB52CB000BE7913 /* View Elements */,
+				9F459CC82BB52CC500BE7913 /* PopularMoviesView.swift */,
+				9F459CC52BB52C9B00BE7913 /* PopularMoviesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +293,7 @@
 		9FF129562BB36F9E0030134E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9F459CC32BB52C8100BE7913 /* PopularMoviesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,6 +301,7 @@
 		9FF129572BB36FAC0030134E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				9F459CC12BB52C5E00BE7913 /* PopularMoviesCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -402,14 +436,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1257A2BB6576B008920EC /* UIImage+Extension.swift in Sources */,
 				9FDF79A62BAEC61A00222C77 /* GenericCardView.swift in Sources */,
 				9F8031122BA9F942002AC44B /* ViewController.swift in Sources */,
 				9F80315C2BAA0E1F002AC44B /* MainAppViewController.swift in Sources */,
+				9F459CC22BB52C5E00BE7913 /* PopularMoviesCoordinator.swift in Sources */,
 				9F80315B2BAA0E1F002AC44B /* MainAppView.swift in Sources */,
 				9F80315A2BAA0E1F002AC44B /* MainAppCoordinator.swift in Sources */,
 				9F80310E2BA9F942002AC44B /* AppDelegate.swift in Sources */,
+				9F459CC62BB52C9B00BE7913 /* PopularMoviesViewController.swift in Sources */,
 				9FF129502BB35CF00030134E /* MovieDBService.swift in Sources */,
 				9F8031642BAA0E32002AC44B /* BaseViewController.swift in Sources */,
+				9F459CC92BB52CC500BE7913 /* PopularMoviesView.swift in Sources */,
+				9F459CC42BB52C8100BE7913 /* PopularMoviesViewModel.swift in Sources */,
+				9F26E0F12BB54E1300A0512A /* PopularMovieCell.swift in Sources */,
 				9FDF79A82BAF505500222C77 /* MainAppViewModel.swift in Sources */,
 				9FF129522BB35D470030134E /* MovieDBAPI.swift in Sources */,
 				9F8031102BA9F942002AC44B /* SceneDelegate.swift in Sources */,

@@ -5,4 +5,35 @@
 //  Created by Diego Ribeiro on 28/03/24.
 //
 
-import Foundation
+import UIKit
+
+class PopularMoviesCoordinator: Coordinator {
+    
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        goToResume()
+    }
+    
+    func goToResume() {
+        let vm = PopularMoviesViewModel()
+        vm.coordinatorDelegate = self
+        let vc = PopularMoviesViewController(viewModel: vm)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension PopularMoviesCoordinator: PopularMoviesViewModelCoordinatorDelegate {
+    func goToMovieDetailView(movieId: Int) {
+        print(movieId)
+    }
+    
+    func goBack() {
+        navigationController.popViewController(animated: true)
+    }
+}

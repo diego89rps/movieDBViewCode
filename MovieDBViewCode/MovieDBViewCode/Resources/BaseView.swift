@@ -48,10 +48,10 @@ class BaseView: UIView {
             container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             container.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
-            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            scrollView.topAnchor.constraint(equalTo: topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
@@ -59,10 +59,10 @@ class BaseView: UIView {
 extension BaseView {
     func insertIntoSuperView(superView: UIView) {
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: superView.topAnchor),
+            self.topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor),
             self.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
             self.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            self.bottomAnchor.constraint(equalTo: superView.bottomAnchor)
+            self.bottomAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }

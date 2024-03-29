@@ -11,7 +11,7 @@ class MainAppCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    
+        
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -30,6 +30,8 @@ class MainAppCoordinator: Coordinator {
 
 extension MainAppCoordinator: MainAppViewModelCoordinatorDelegate {
     func goToNextView() {
-        print("entrou")
+        let coordinator = PopularMoviesCoordinator(navigationController: navigationController)
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }

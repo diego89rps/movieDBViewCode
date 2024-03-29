@@ -1,5 +1,5 @@
 //
-//  Extension+UIImage.swift
+//  UIImage+Extension.swift
 //  MovieDBViewCode
 //
 //  Created by Diego Ribeiro on 28/03/24.
