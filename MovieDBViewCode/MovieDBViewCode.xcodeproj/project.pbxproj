@@ -34,6 +34,8 @@
 		9FB125852BB65D10008920EC /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB125842BB65D10008920EC /* MovieDetailsView.swift */; };
 		9FB125872BB65D1D008920EC /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB125862BB65D1D008920EC /* MovieDetailsViewController.swift */; };
 		9FB125892BB661A6008920EC /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB125882BB661A6008920EC /* MovieDetailsModel.swift */; };
+		9FD49E3F2BB7C3E500E30B01 /* MainAppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD49E3E2BB7C3E500E30B01 /* MainAppViewModelTests.swift */; };
+		9FD49E412BB7C5E200E30B01 /* MovieDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD49E402BB7C5E100E30B01 /* MovieDetailsViewModelTests.swift */; };
 		9FDF79A62BAEC61A00222C77 /* GenericCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */; };
 		9FDF79A82BAF505500222C77 /* MainAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */; };
 		9FF129502BB35CF00030134E /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1294F2BB35CF00030134E /* MovieDBService.swift */; };
@@ -90,6 +92,8 @@
 		9FB125842BB65D10008920EC /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		9FB125862BB65D1D008920EC /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		9FB125882BB661A6008920EC /* MovieDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
+		9FD49E3E2BB7C3E500E30B01 /* MainAppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModelTests.swift; sourceTree = "<group>"; };
+		9FD49E402BB7C5E100E30B01 /* MovieDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		9FDF79A52BAEC61A00222C77 /* GenericCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCardView.swift; sourceTree = "<group>"; };
 		9FDF79A72BAF505500222C77 /* MainAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModel.swift; sourceTree = "<group>"; };
 		9FF1294F2BB35CF00030134E /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				9F8031242BA9F949002AC44B /* MovieDBViewCodeTests.swift */,
+				9FD49E3E2BB7C3E500E30B01 /* MainAppViewModelTests.swift */,
+				9FD49E402BB7C5E100E30B01 /* MovieDetailsViewModelTests.swift */,
 			);
 			path = MovieDBViewCodeTests;
 			sourceTree = "<group>";
@@ -529,6 +535,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8031252BA9F949002AC44B /* MovieDBViewCodeTests.swift in Sources */,
+				9FD49E412BB7C5E200E30B01 /* MovieDetailsViewModelTests.swift in Sources */,
+				9FD49E3F2BB7C3E500E30B01 /* MainAppViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
