@@ -31,11 +31,11 @@ class MainAppViewModel {
     }
     
     var leftButtonText: String {
-        return "esquerda"
+        return "Loading On"
     }
     
     var rightButtonText: String {
-        return "direita"
+        return "Loading Off"
     }
     
     var simpleTitleText: String {

@@ -30,7 +30,9 @@ class PopularMoviesCoordinator: Coordinator {
 
 extension PopularMoviesCoordinator: PopularMoviesViewModelCoordinatorDelegate {
     func goToMovieDetailView(movieId: Int) {
-        print(movieId)
+        let coordinator = MovieDetailsCoordinator(navigationController: navigationController, movieId: movieId)
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
     
     func goBack() {

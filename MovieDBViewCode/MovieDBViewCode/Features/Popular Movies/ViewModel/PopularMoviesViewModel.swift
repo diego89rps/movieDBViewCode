@@ -28,15 +28,11 @@ class PopularMoviesViewModel {
     var movieResult: MovieResult?
     
     var screenTitleText: String {
-        return "Menu"
+        return "Popular Movies"
     }
     
     var leftButtonText: String {
-        return "esquerda"
-    }
-    
-    var rightButtonText: String {
-        return "direita"
+        return "to back"
     }
     
     var numberOfMovies: Int {

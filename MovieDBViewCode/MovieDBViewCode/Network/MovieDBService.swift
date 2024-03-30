@@ -18,11 +18,11 @@ class MovieDBService {
         }
     }
     
-    func fetchMovieDetailAwait(movieId: Int) async throws -> [String: Any] {
+    func fetchMovieDetailAwait(movieId: Int) async throws -> MovieDetailsModel {
         do {
             let (data, _) = try await URLSession.shared.data(from: MovieDBAPI.movieDetails(movieId).url)
-            let decodedData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-//            let decodedData = try JSONDecoder().decode(MovieResult.self, from: data)
+            printRequest(data: data)
+            let decodedData = try JSONDecoder().decode(MovieDetailsModel.self, from: data)
             return decodedData
         } catch {
             throw error
@@ -52,7 +52,11 @@ extension MovieDBService {
                 print("Não foi possível converter os dados em um objeto JSON.")
                 return
             }
+            print("############# AQUI INICIO ")
+            print("############# AQUI INICIO ")
             print(json)
+            print("############# AQUI FIM ")
+            print("############# AQUI FIM ")
         } catch {
             print("Erro ao converter os dados em JSON:", error)
         }

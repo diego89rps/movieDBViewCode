@@ -54,21 +54,15 @@ class PopularMoviesViewController: BaseViewController {
         let leftButton = UIBarButtonItem(title: viewModel.leftButtonText, 
                                          style: .plain, target: self,
                                          action: #selector(leftButtonAction))
-        let rightButton = UIBarButtonItem(title: viewModel.rightButtonText, 
-                                          style: .plain, target: self,
-                                          action: #selector(rightButtonAction))
+
         createNavBar(title: viewModel.screenTitleText, 
-                     leftButton: leftButton, rightButton: rightButton)
+                     leftButton: leftButton, rightButton: nil)
     }
     
     //MARK: - Events
     
     @objc func leftButtonAction() {
         viewModel.goBack()
-    }
-    
-    @objc func rightButtonAction() {
-        
     }
 }
 
@@ -120,5 +114,4 @@ extension PopularMoviesViewController: UITableViewDataSource, UITableViewDelegat
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        viewModel.goToNextView(index: indexPath.row)
     }
-    
 }

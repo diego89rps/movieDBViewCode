@@ -28,4 +28,10 @@ extension BaseViewCode {
         label.numberOfLines = 0
         return label
     }
+    
+    func createSimpleView() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
 }

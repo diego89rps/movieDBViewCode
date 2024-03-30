@@ -64,4 +64,10 @@ open class BaseViewController: UIViewController {
             self.view.isUserInteractionEnabled = true
         }
     }
+    
+    func openURL(url: String) {
+        if let url = URL(string: url), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
